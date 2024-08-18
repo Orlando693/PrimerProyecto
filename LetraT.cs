@@ -4,7 +4,7 @@ using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
-//hola luis
+
 
 namespace PrimerProyecto
 {
@@ -115,7 +115,7 @@ namespace PrimerProyecto
                 uniform mat4 model;
 
                 void main(){
-                    gl_Position = projection * view * model * vec4(aPosition, 1f);
+                    gl_Position = projection * view * model * vec4(aPosition, 1);
                 }
                 ";
             int VerticeShaderHandle = GL.CreateShader(ShaderType.VertexShader);
@@ -130,7 +130,7 @@ namespace PrimerProyecto
                 out vec4 pixelColor;
                 
                 void main(){
-                    pixelColor = vec4(0f, 0f, 0f, 1f);   // Color negro para las líneas
+                    pixelColor = vec4(0, 0, 0, 1);   // Color negro para las líneas
                 }
                 ";
             int pixelShaderHandle = GL.CreateShader(ShaderType.FragmentShader);
