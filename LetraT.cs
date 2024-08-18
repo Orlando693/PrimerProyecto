@@ -4,6 +4,7 @@ using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
+//hola luis
 
 namespace PrimerProyecto
 {
@@ -75,7 +76,7 @@ namespace PrimerProyecto
          
          
 
-        protected override void OnLoad()
+        protected override void OnLoad() //Cargar
         {
             GL.ClearColor(new Color4(0.2f, 0.9f, 0.8f, 1f));
           
@@ -156,7 +157,7 @@ namespace PrimerProyecto
             base.OnLoad();
         }
 
-        protected override void OnUnload()
+        protected override void OnUnload() //liberar memoria
         {
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
             GL.DeleteBuffer(this.VerticeBufferHandle);
